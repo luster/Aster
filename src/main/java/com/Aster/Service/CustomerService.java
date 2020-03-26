@@ -1,6 +1,7 @@
 package com.Aster.Service;
 
 import com.Aster.Database.CustomerDB;
+import com.Aster.Database.CustomerDBMySql;
 import com.Aster.Database.FloristDB;
 import com.Aster.Model.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ public class CustomerService {
     private FloristDB floristDB;
 
     @Autowired
-    public CustomerService(CustomerDB customerDB, FloristDB floristDB){
+    public CustomerService(CustomerDBMySql customerDB, FloristDB floristDB){
         this.customerDB = customerDB;
         this.floristDB = floristDB;
     }
